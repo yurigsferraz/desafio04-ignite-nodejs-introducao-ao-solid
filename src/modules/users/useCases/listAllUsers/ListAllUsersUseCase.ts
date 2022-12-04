@@ -8,7 +8,7 @@ interface IRequest {
 class ListAllUsersUseCase {
     constructor(private usersRepository: IUsersRepository) {}
 
-    execute({ user_id }): User[] {
+    execute({ user_id }: IRequest): User[] {
         const user = this.usersRepository.findById(user_id);
 
         if (!user) {
@@ -23,4 +23,4 @@ class ListAllUsersUseCase {
     }
 }
 
-export { ListAllUsersUseCase };
+export { ListAllUsersUseCase, IRequest };
