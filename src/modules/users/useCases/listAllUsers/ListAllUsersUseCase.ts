@@ -23,4 +23,4 @@ class ListAllUsersUseCase {
     }
 }
 
-export { ListAllUsersUseCase, IRequest };
+export { ListAllUsersUseCase };
